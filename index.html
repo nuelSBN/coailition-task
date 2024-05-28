@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/images/Layer 6.png"
+      type="image/x-icon"
+    />
+    <title>Tech Care</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">
+          <img src="assets/svg/TestLogo.svg" alt="logo icon" />
+        </div>
+        <nav class="navbar">
+          <a href="">
+            <img src="assets/svg/home_icon.svg" alt="home icon" />
+            <span>Overview</span>
+          </a>
+          <a href="" class="active">
+            <img src="assets/svg/group.svg" alt="patients icon" />
+            <span>Patients</span>
+          </a>
+          <a href="">
+            <img src="assets/svg/calendar.svg" alt="calendar icon" />
+            <span>Schedule</span>
+          </a>
+          <a href="">
+            <img src="assets/svg/chat.svg" alt="message icon" />
+            <span>Message</span>
+          </a>
+          <a href="">
+            <img src="assets/svg/credit_card.svg" alt="credit card icon" />
+            <span>Transactions</span>
+          </a>
+        </nav>
+        <div class="right__header">
+          <div class="right__header-profile">
+            <img
+              src="assets/images/senior-woman-doctor.png"
+              alt="Dr. Jose Simmons portrait"
+              title="Dr. Jose Simmons"
+            />
+            <div class="">
+              <h1 title="Dr. Jose Simmons">Dr. Jose Simmons</h1>
+              <h3 title="General Practitioner">General Practitioner</h3>
+            </div>
+          </div>
+          <div class="right__header-icons">
+            <img src="assets/svg/settings.svg" alt="" />
+            <img src="assets/svg/more.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <section class="main__content">
+        <aside class="main__content-left">
+          <div class="main__content-left-top">
+            <p>Patients</p>
+            <img
+              src="assets/svg/search.svg"
+              alt="search icon"
+              title="search icon"
+            />
+          </div>
+          <div class="main__content-left-bottom" id="patients-list"></div>
+        </aside>
+        <div class="main__content-center">
+          <div class="main__content-center-top">
+            <h1>Diagnosis History</h1>
+            <div class="main__content-center-chart-box">
+              <div class="main__content-center-chart">
+                <canvas id="myChart"></canvas>
+              </div>
+
+              <div class="main__content-center-text">
+                <div class="first">
+                  <div class="">
+                    <div class="circle"></div>
+                    <h1 class="title">Systolic</h1>
+                  </div>
+                  <div class="value" id="systolicValue">160</div>
+                  <div class="" style="display: flex; align-items: center">
+                    <img src="assets/svg/ArrowUp.svg" alt="" />
+                    <span
+                      style="
+                        text-align: left;
+                        font: normal normal normal 14px/19px Manrope;
+                        letter-spacing: 0px;
+                        color: #072635;
+                      "
+                      >Higher than Average</span
+                    >
+                  </div>
+                </div>
+                <div class="first">
+                  <div class="">
+                    <div
+                      class="circle"
+                      id="diastolicValue"
+                      style="background-color: #8c6fe6"
+                    ></div>
+                    <h1 class="title">Diastolic</h1>
+                  </div>
+                  <div class="value">78</div>
+                  <div class="" style="display: flex; align-items: center">
+                    <img src="assets/svg/ArrowDown.svg" alt="" />
+                    <span
+                      style="
+                        text-align: left;
+                        font: normal normal normal 14px/19px Manrope;
+                        letter-spacing: 0px;
+                        color: #072635;
+                      "
+                      >Lower than Average</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main__content-center-card">
+              <div class="">
+                <img src="assets/svg/respiratory rate.svg" alt="" />
+                <h1>Respiratory Rate</h1>
+                <p id="rbpm"></p>
+                <span id="rbpm_levels"></span>
+              </div>
+              <div class="">
+                <img src="assets/svg/temperature.svg" alt="" />
+                <h1>Temperature</h1>
+                <p id="temp"></p>
+                <span id="temp_levels"></span>
+              </div>
+              <div class="">
+                <img src="assets/svg/HeartBPM.svg" alt="" />
+                <h1>Heart Rate</h1>
+                <p id="hbpm"></p>
+                <span id="hbpm_levels"></span>
+              </div>
+            </div>
+          </div>
+          <div class="main__content-center-bottom">
+            <h1>Diagnosis List</h1>
+            <div class="main__content-center-table">
+              <div class="main__content-center-table-head">
+                <p>Problem/Diagnosis</p>
+                <p>Description</p>
+                <p>Status</p>
+              </div>
+              <div class="main__content-center-table-body"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="main__content-right"></aside>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
